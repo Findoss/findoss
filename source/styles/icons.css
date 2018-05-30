@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?htp5h');
+  src:  url('./fonts/icomoon.eot?htp5h#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?htp5h') format('truetype'),
+    url('./fonts/icomoon.woff?htp5h') format('woff'),
+    url('./fonts/icomoon.svg?htp5h#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change ./fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-print:before {
+  content: "\e90b";
+}
+.icon-skills:before {
+  content: "\e909";
+}
+.icon-codewars:before {
+  content: "\e90a";
+}
+.icon-pdf:before {
+  content: "\e908";
+}
+.icon-education:before {
+  content: "\e900";
+}
+.icon-github:before {
+  content: "\e901";
+}
+.icon-link:before {
+  content: "\e902";
+}
+.icon-linkedin:before {
+  content: "\e903";
+}
+.icon-profile:before {
+  content: "\e904";
+}
+.icon-project:before {
+  content: "\e905";
+}
+.icon-vk:before {
+  content: "\e906";
+}
+.icon-work:before {
+  content: "\e907";
+}
+
+.icon {
+  position: relative;
+  left: -25px;
+  padding: 5px;
+  float: left;
+  color: var(--nord0);
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.download-icon {
+  font-size: 40px;
+  color: var(--nord10);
+}
+
+.link-icon {
+  font-size: 30px;
+  color: var(--nord10);
+}
