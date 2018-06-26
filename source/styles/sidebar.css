@@ -31,10 +31,9 @@
 /* links */
 .sidebar-section__contact-link {
   margin-bottom: 10px;
-  font-size: 1.3em;
+  font-size: 1.25em;
 }
 
 .sidebar-section__contact-link:hover .link-icon {
-  font-size: 1.3em;
   color: var(--nord8);
 }
