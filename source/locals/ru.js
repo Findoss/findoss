@@ -6,7 +6,7 @@ localizedData.ru = {
   age: new Date().getFullYear() - 1995,
   email: 'findoss@yandex.ru',
   foto: './public/images/foto.png',
-  location: 'Россия, Санкт-Петербург',
+  location: 'Россия,<br> Санкт-Петербург',
   family: 'Холост',
   relocation: 'Да, Москва',
   projects: [{

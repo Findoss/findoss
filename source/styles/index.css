@@ -124,6 +124,10 @@ br {
   clear: both;
 }
 
+tr:hover {
+  background-color: var(--nord0);
+}
+
 .nowrap {
   white-space: nowrap;
 }
