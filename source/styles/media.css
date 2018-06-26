@@ -163,6 +163,7 @@
 
   .content-section__title {
     margin-bottom: 10px;
+    left: 0;
   }
 
   .sidebar__header {
