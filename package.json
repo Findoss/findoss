@@ -4,7 +4,7 @@
   "description": "resume",
   "main": "index.html",
   "scripts": {
-    "js:concat": "concat -o public/bundle.js source/en.js source/ru.js source/main.template.js source/index.js",
+    "js:concat": "concat -o public/bundle.js source/locals/en.js source/locals/ru.js source/main.template.js source/index.js",
     "js:uglify": "uglifyjs public/bundle.js -c -m -o public/bundle.js",
     "js:bundle": "npm run js:concat && npm run js:uglify",
     "css:concat": "concat -o public/prebundle.css source/styles/index.css source/styles/content.css source/styles/sidebar.css source/styles/icons.css source/styles/signature.css source/styles/media.css",

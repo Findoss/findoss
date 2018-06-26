@@ -62,10 +62,7 @@
 }
 
 .icon {
-  position: relative;
-  left: -25px;
   padding: 5px;
-  float: left;
   color: var(--nord0);
   font-size: 40px;
   border-radius: 50%;

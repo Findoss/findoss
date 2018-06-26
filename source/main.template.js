@@ -1,29 +1,51 @@
-
 const templateMain = `
 <div class="container">
   <!-- sidebar -->
   <div class="sidebar">
 
     <div class="sidebar__header">
-      <img class="sidebar__header-foto" src="{{ data.foto }}" alt="{{ data.name }}"></img>
+      <img 
+        class="sidebar__header-foto" 
+        src="{{ data.foto }}" 
+        alt="{{ data.name }}" 
+        itemprop="image"
+      ></img>
     </div>
 
     <div class="sidebar__section">
       <h2 class="sidebar-section__title">{{ data.i.info }}</h2>
       <table>
-        {% data.i.infoTable.forEach((i) => { %}
         <tr>
-          <td>{{ i }}</td>
-          <td>{{ data[i.toLowerCase()] }}</td>
+          <td>{{ data.i.name }}</td>
+          <td>{{ data.name }}</td>
         </tr>
-        {% }) %}
+        <tr>
+          <td>{{ data.i.age }}</td>
+          <td>{{ data.age }}</td>
+        </tr>
+        <tr>
+          <td>{{ data.i.email }}</td>
+          <td><a href="mailto:{{ data.email }}" itemprop="email">{{ data.email }}</a></td>
+        </tr>
+        <tr>
+          <td>{{ data.i.location }}</td>
+          <td>{{ data.location }}</td>
+        </tr>
+        <tr>
+          <td>{{ data.i.relocation }}</td>
+          <td>{{ data.relocation }}</td>
+        </tr>
+        <tr>
+          <td>{{ data.i.family }}</td>
+          <td>{{ data.family }}</td>
+        </tr>
       </table>
     </div>
 
     <div class="sidebar__section">
       <h2 class="sidebar-section__title">{{ data.i.links }}</h2>
       {% data.links.forEach((link) => { %}
-      <p class="sidebar-section__contact-link">
+      <p class="sidebar-section__contact-link nowrap">
         <a href="{{ link.link }}" target="_blank">
           <span class="link-icon icon-{{ link.icon }}"></span> {{ link.name }}</a>
       </p>
@@ -32,16 +54,14 @@ const templateMain = `
 
     <div class="sidebar__section">
       <h2 class="sidebar-section__title">{{ data.i.personalSkills }}</h2>
-      {% data.personalSkills.forEach((skill) => { %}
-      <span>{{ skill }},</span>
-      {% }) %}
+      {% const personalSkills = data.personalSkills.join(', <br>'); %}
+      {{ personalSkills }}.
     </div>
 
     <div class="sidebar__section">
       <h2 class="sidebar-section__title">{{ data.i.hobbies }}</h2>
-      {% data.hobbies.forEach((hobby) => { %}
-      <p>{{ hobby }},</p>
-      {% }) %}
+      {% const hobbies = data.hobbies.join(', <br>') %}
+      {{ hobbies }}.
     </div>
 
   </div>
@@ -51,7 +71,7 @@ const templateMain = `
   <div class="content">
     <div class="content__bar">
       <div class="content-bar__download">
-        <a href="http://" target="_blank">
+        <a href="./public/Nikita_Stroganov_{{ data.local }}.pdf" target="_blank">
           <span class="download-icon icon-pdf"></span>
         </a>
       </div>
@@ -66,42 +86,46 @@ const templateMain = `
     </div>
 
     <div class="content__header">
-      <h1 class="content-header__name">{{ data.name }}</h1>
-      <strong class="content-header__subtitle">{{ data.profession }}</strong>
+      <h1 class="content-header__name" itemprop="name">{{ data.name }}</h1>
+      <span class="content-header__subtitle" itemprop="jobTitle">{{ data.profession }}</span>
     </div>
 
     <div class="content__section">
-      <span class="icon icon-profile"></span>
-      <h2 class="content-section__title">{{ data.i.about }}</h2>
+      <h2 class="content-section__title">
+        <span class="icon icon-profile"></span>
+        {{ data.i.about }}
+      </h2>
       <br>
       <p>{{ data.about }}</p>
     </div>
 
     <div class="content__section">
-      <span class="icon icon-skills"></span>
-      <h2 class="content-section__title">{{ data.i.professionalSkills }}</h2>
+
+      <h2 class="content-section__title">
+        <span class="icon icon-skills"></span>
+        {{ data.i.professionalSkills }}
+      </h2>
       <br>
+
       {% data.professionalSkills.forEach((block) => { %} 
-        <h4><strong>{{ block.title }}</strong></h4>
-        {% block.skills.forEach((skill) => { %} 
-          {{ skill }}, 
-        {% }) %}
+        <h3>{{ block.title }}</h3>
+        {% const skills = block.skills.join(', ') %}
+        {{ skills }}.
         <br><br>
       {% }) %}
     </div>
 
     <div class="content__section">
-      <span class="icon icon-project"></span>
-      <h2 class="content-section__title">{{ data.i.projects }}</h2>
-      <br> {% data.projects.forEach((project) => { %}
+      
+      <h2 class="content-section__title">
+        <span class="icon icon-project"></span>
+        {{ data.i.projects }}
+      </h2>
+      {% data.projects.forEach((project) => { %}
       <div class="content-section__item section-item">
         <div class="section-item__dates"></div>
         <div class="section-item__body section-item__body-project">
-          <h4>
-            <strong>
-              <a href="{{ project.link }}">{{ project.title }}</a>
-            </strong>
-          </h4>
+          <h4><a href="{{ project.link }}">{{ project.title }}</a></h4>
           <div class="section-item__description">{{ project.description }}</div>
         </div>
       </div>
@@ -109,16 +133,22 @@ const templateMain = `
     </div>
 
     <div class="content__section">
-      <span class="icon icon-work"></span>
-      <h2 class="content-section__title">{{ data.i.work }}</h2>
-      <br> {% data.works.forEach((work) => { %}
+      
+      <h2 class="content-section__title">
+        <span class="icon icon-work"></span>
+        {{ data.i.work }}
+      </h2>
+      {% data.works.forEach((work) => { %}
       <div class="content-section__item section-item">
         <div class="section-item__dates">
           <div class="section-item__dates-start">{{ work.dateStart }}</div>
           <div class="section-item__dates-end">{{ work.dateEnd }}</div>
         </div>
         <div class="section-item__body">
-          <h4 class="section-item__title">{{ work.title }} ({{ data.f.setYear(work.dateEnd-work.dateStart) }})</h4>
+          <h4 class="section-item__title">
+            {{ work.title }} 
+            <span class="nowrap">({{ data.f.getTextYear(work.dateEnd-work.dateStart) }})</span>
+          </h4>
           <div class="section-item__subtitle">{{ work.subtitle }}</div>
           <div class="section-item__description">{{ work.description }}</div>
         </div>
@@ -127,16 +157,22 @@ const templateMain = `
     </div>
 
     <div class="content__section">
-      <span class="icon icon-education"></span>
-      <h2 class="content-section__title">{{ data.i.education }}</h2>
-      <br> {% data.educations.forEach((education) => { %}
+      
+      <h2 class="content-section__title">
+        <span class="icon icon-education"></span>
+        {{ data.i.education }}
+      </h2>
+      {% data.educations.forEach((education) => { %}
       <div class="content-section__item section-item">
         <div class="section-item__dates">
           <div class="section-item__dates-start">{{ education.dateStart }}</div>
           <div class="section-item__dates-end">{{ education.dateEnd }}</div>
         </div>
         <div class="section-item__body">
-          <h4 class="section-item__title">{{ education.title }} ({{ data.f.setYear(education.dateEnd-education.dateStart) }})</h4>
+          <h4 class="section-item__title">
+            {{ education.title }}
+            <span class="nowrap">({{ data.f.getTextYear(education.dateEnd-education.dateStart) }})</span>
+            </h4>
           <div class="section-item__subtitle">{{ education.subtitle }}</div>
           <div class="section-item__description">{{ education.description }}</div>
         </div>

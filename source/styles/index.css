@@ -9,6 +9,47 @@
   --nord10: #5e81ac;
 }
 
+@font-face {
+  font-family: "PFDinCondensedRegular";
+  src: url("fonts/PFDinCondensedRegular.eot");
+  src: url("fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"),
+  url("fonts/PFDinCondensedRegular.woff") format("woff"),
+  url("fonts/PFDinCondensedRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PFDinCondensedLight";
+  src: url("fonts/PFDinCondensedLight.eot");
+  src: url("fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"),
+  url("fonts/PFDinCondensedLight.woff") format("woff"),
+  url("fonts/PFDinCondensedLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PFDinCondensedRegular";
+  src: url("../../public/onts/PFDinCondensedRegular.eot");
+  src: url("../../public/fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"),
+  url("../../public/fonts/PFDinCondensedRegular.woff") format("woff"),
+  url("../../public/fonts/PFDinCondensedRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PFDinCondensedLight";
+  src: url("../../public/fonts/PFDinCondensedLight.eot");
+  src: url("../../public/fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"),
+  url("../../public/fonts/PFDinCondensedLight.woff") format("woff"),
+  url("../../public/fonts/PFDinCondensedLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
 body {
   padding: 0;
   margin: 0;
@@ -16,8 +57,8 @@ body {
   background-attachment: fixed; 
   background-color: var(--nord6);
   background-image: linear-gradient(to bottom,var(--nord4), var(--nord6));
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
+  font-family: PFDinCondensedLight, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.2em;
 }
 
 h1,
@@ -27,7 +68,7 @@ h4 {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 h1,
@@ -37,21 +78,21 @@ h3 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1em;
   font-weight: bold;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1.1em;
 }
 
 a {
@@ -83,6 +124,10 @@ br {
   clear: both;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 /* grid */
 
 #app {
@@ -100,6 +145,7 @@ br {
 
 .sidebar,
 .content {
+  box-sizing: content-box;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
