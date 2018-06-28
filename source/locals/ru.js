@@ -2,7 +2,7 @@ localizedData.ru = {
   local: 'ru',
   name: 'Строганов Никита',
   profession: 'начинающий frontend разработчик',
-  about: '[06]',
+  about: `Я начинающий Front-end разработчик. Мне нравится работа, в основном ориентированная на создание сложных интерфейсов. Я довольно аккуратен, тщательно слежу за качеством исполнения своей работы и не считаю написание тестов пустой тратой времени. Мне нравится работать в команде, активно обмениваясь знаниями и обсуждая сложные проблемы. Как говорится: "Одна голова хорошо, а две лучше". В свободное время занимаюсь саморазвитием. В целях повышения уровня программирования изучаю соответствующую литературу и использую следующие ресурсы: <a href="https://habr.com/" target="_blank">Habrahabr</a>, <a href="https://www.smashingmagazine.com" target="_blank">SmashingMagazine</a>, <a href="https://medium.com/" target="_blank">Medium</a>.`,
   age: new Date().getFullYear() - 1995,
   email: 'findoss@yandex.ru',
   foto: './public/images/foto.png',
@@ -12,22 +12,22 @@ localizedData.ru = {
   projects: [{
     title: 'Duel game',
     link: '#',
-    description: '[07]',
+    description: 'in process',
   }],
   works: [{
     dateStart: 2015,
     dateEnd: 2017,
     title: 'Freelance',
-    subtitle: '[08]',
-    description: '[09]',
+    subtitle: 'Создал несколько сайтов и два небольших интернет-магазина.',
+    description: 'Использовал PHP 5, WordPress, Symfony2, Slim, Twig, MySQL, JQuery.',
   }],
   educations: [
     {
       dateStart: 2017,
       dateEnd: 2018,
       title: 'Обучение с наставником',
-      subtitle: '[10]',
-      description: '[11]',
+      subtitle: 'Изучил лучшие практики создания front-end части веб приложений, разобрался с актуальными инструментами.',
+      description: 'Основные темы: Patterns programming, js(es6+) vue.js, node.js, mongodb',
     },
     {
       dateStart: 2010,
@@ -39,9 +39,9 @@ localizedData.ru = {
   ],
   professionalSkills: [
     {
-      title: '[12]',
+      title: 'Я знаю',
       skills: [
-        'JavaScript (ES6+)',
+        'JavaScript (и ES6+)',
         'HTML',
         'CSS',
         'PostCSS',
@@ -56,7 +56,7 @@ localizedData.ru = {
       ],
     },
     {
-      title: '[13]',
+      title: 'Имею представление о',
       skills: [
         'mocha',
         'chai',
@@ -83,10 +83,7 @@ localizedData.ru = {
     },
   ],
   personalSkills: [
-    '[14]',
-    '[15]',
-    '[16]',
-    '[17]',
+    '',
   ],
   hobbies: [
     'любительский хоккей',
@@ -95,7 +92,7 @@ localizedData.ru = {
     'туризм',
   ],
   i: {
-    about: 'Немного обо мне',
+    about: 'Обо мне',
     hobbies: 'Увлечения',
     info: 'Профиль',
     links: 'Ссылки',
