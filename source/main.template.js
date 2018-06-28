@@ -53,12 +53,6 @@ const templateMain = `
     </div>
 
     <div class="sidebar__section">
-      <h2 class="sidebar-section__title">{{ data.i.personalSkills }}</h2>
-      {% const personalSkills = data.personalSkills.join(', <br>'); %}
-      {{ personalSkills }}.
-    </div>
-
-    <div class="sidebar__section">
       <h2 class="sidebar-section__title">{{ data.i.hobbies }}</h2>
       {% const hobbies = data.hobbies.join(', <br>') %}
       {{ hobbies }}.
