@@ -3,7 +3,7 @@ localizedData.en = {
   local: 'en',
   name: 'Nikita Stroganov',
   profession: 'junior frontend developer',
-  about: '[18]',
+  about: `I’m a begginer with front-end development skills. I like work that primarily focused on developing user interface.I’m quite accurate and I carefully monitor the quality.I don’t think it’s wasting time to write tests. I like to work in collaboration as working together means sharing resources efficiently and keeping people informed.As they say: «Two heads are better than one».In my spare time I am engaged in self - development.In order to improve my programmer techniques I read a lot of specific literature and use a variety of sources such as < a href = "https://habr.com/" target = "_blank" >Habrahabr</a>, < a href = "https://www.smashingmagazine.com" target = "_blank" > SmashingMagazine</a >, <a href="https://medium.com/" target="_blank">Medium</a>.`,
   age: new Date().getFullYear() - 1995,
   email: 'findoss@yandex.ru',
   foto: './public/images/foto.png',
@@ -13,22 +13,22 @@ localizedData.en = {
   projects: [{
     title: 'Duel game',
     link: '#',
-    description: '[19]',
+    description: 'in process',
   }],
   works: [{
     dateStart: 2015,
     dateEnd: 2017,
     title: 'Freelance',
-    subtitle: '[20]',
-    description: '[21]',
+    subtitle: 'I have developed sites and two small online shops.',
+    description: 'Use PHP 5, WordPress, Symfony2, Slim, Twig, MySQL, JQuery.',
   }],
   educations: [
     {
       dateStart: 2017,
       dateEnd: 2018,
       title: 'Learning with a mentor',
-      subtitle: '[22]',
-      description: '[23]',
+      subtitle: 'I studied the best practices of creating front-end parts of web applications, figured out the actual tools.',
+      description: 'Main topics: Patterns programming, js(es6+) vue.js, node.js, mongodb',
     },
     {
       dateStart: 2010,
@@ -40,7 +40,7 @@ localizedData.en = {
   ],
   professionalSkills: [
     {
-      title: '[24]',
+      title: 'I know',
       skills: [
         'JavaScript (ES6+)',
         'HTML',
@@ -57,7 +57,7 @@ localizedData.en = {
       ],
     },
     {
-      title: '[25]',
+      title: 'Understand the sense',
       skills: [
         'mocha',
         'chai',
@@ -84,10 +84,7 @@ localizedData.en = {
     },
   ],
   personalSkills: [
-    '[26]',
-    '[27]',
-    '[28]',
-    '[29]',
+    '',
   ],
   hobbies: [
     'amateur hockey',
