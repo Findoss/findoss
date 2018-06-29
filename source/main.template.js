@@ -102,7 +102,7 @@ const templateMain = `
       <br>
 
       {% data.professionalSkills.forEach((block) => { %} 
-        <h3>{{ block.title }}</h3>
+        <h4>{{ block.title }}</h4>
         {% const skills = block.skills.join(', ') %}
         {{ skills }}.
         <br><br>

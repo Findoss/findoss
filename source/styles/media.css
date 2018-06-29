@@ -201,9 +201,13 @@
     padding-left: 0;
   }
 
-  .sidebar__section:nth-last-child(-n+3) {
+  .sidebar__section:nth-last-child(-n+2) {
     display: none;
   }
+
+  /* .sidebar__section:nth-last-child(n+1) {
+    display: none;
+  } */
   
   .content__section-signature {
     display: none;
