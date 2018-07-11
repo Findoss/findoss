@@ -12,7 +12,7 @@ localizedData.ru = {
   projects: [{
     title: 'Duel game',
     link: '#',
-    description: 'in process',
+    description: 'скоро',
   }],
   works: [{
     dateStart: 2015,

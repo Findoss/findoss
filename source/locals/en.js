@@ -13,7 +13,7 @@ localizedData.en = {
   projects: [{
     title: 'Duel game',
     link: '#',
-    description: 'in process',
+    description: 'coming soon',
   }],
   works: [{
     dateStart: 2015,
