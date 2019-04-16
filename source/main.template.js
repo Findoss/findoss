@@ -79,7 +79,7 @@ const templateMain = `
 
     <div class="content__header">
       <h1 class="content-header__name" itemprop="name">{{ data.name }}</h1>
-      <span class="content-header__subtitle" itemprop="jobTitle">{{ data.profession }}</span>
+      <span class="content-header__subtitle caption" itemprop="jobTitle">{{ data.profession }}</span>
     </div>
 
     <div class="content__section">

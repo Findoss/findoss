@@ -1,12 +1,12 @@
 localizedData.ru = {
   local: 'ru',
   name: 'Строганов Никита',
-  profession: 'начинающий frontend разработчик',
+  profession: 'frontend разработчик',
   about:
-    'Я начинающий Front-end разработчик. Мне нравится работа, в основном ориентированная на создание сложных интерфейсов. Я довольно аккуратен, тщательно слежу за качеством исполнения своей работы и не считаю написание тестов пустой тратой времени. В свободное время занимаюсь хобби. В целях повышения уровня программирования изучаю соответствующую литературу и использую следующие ресурсы: <a href="https://habr.com/" target="_blank">Habrahabr</a>, <a href="https://www.smashingmagazine.com" target="_blank">SmashingMagazine</a>, <a href="https://medium.com/" target="_blank">Medium</a>.',
+    'Мне нравится работа, в основном ориентированная на создание сложных интерфейсов. Я довольно аккуратен, тщательно слежу за качеством исполнения своей работы и не считаю написание тестов пустой тратой времени. В свободное время занимаюсь хобби. В целях повышения уровня программирования изучаю соответствующую литературу и использую следующие ресурсы: <a href="https://habr.com/" target="_blank">Habrahabr</a>, <a href="https://www.smashingmagazine.com" target="_blank">SmashingMagazine</a>, <a href="https://medium.com/" target="_blank">Medium</a>.',
   email: 'findoss@yandex.ru',
   foto: './public/images/foto.png',
-  location: 'Россия,<br> Санкт-Петербург',
+  location: 'Россия,<wbr> Санкт-Петербург',
   relocation: 'Нет',
   projects: [
     {
@@ -27,12 +27,12 @@ localizedData.ru = {
       description:
         'Игра в жанре 3 в ряд<br>Frontend: Vue + vuex + vue router, i18n, websocket, css<br>Backend: Node.js (koa, mongoose), MongoDB<br>Tests: mocha + chai',
     },
-    {
-      title: 'Stemy',
-      link: 'https://github.com/Findoss/stemy',
-      description:
-        'Определение частей речи на основе Yandex.MyStem<br>Frontend: Vanilla JS, html, css<br>Backend: Node.js (express, Yandex.Stem)<br>',
-    },
+    // {
+    //   title: 'Stemy',
+    //   link: 'https://github.com/Findoss/stemy',
+    //   description:
+    //     'Определение частей речи на основе Yandex.MyStem<br>Frontend: Vanilla JS, html, css<br>Backend: Node.js (express, Yandex.Stem)<br>',
+    // },
   ],
   employment: [
     'проектная&nbsp;работа',
@@ -101,14 +101,14 @@ localizedData.ru = {
     {
       title: 'Занимался',
       skills: [
-        'Разработкой SPA на Vue.js, React.js (c нуля)<br>',
-        'Разработкой UI компонентов и версткой в соответствии с дизайном<br>',
-        'Интеграцией REST API на клиент<br>',
-        'Локализацией SPA<br>',
-        'Рефакторингом старого JS/jQuery кода<br>',
-        'Оптимизацией скорости загрузки и старой верстки<br>',
-        'Написание документации API сервиса<br>',
-        'Написание unit и интегационных тестов',
+        '‧ Разработкой SPA на Vue.js, React.js (c нуля)<br>',
+        '‧ Разработкой UI компонентов и версткой в соответствии с дизайном<br>',
+        '‧ Интеграцией REST API на клиент<br>',
+        '‧ Локализацией SPA<br>',
+        '‧ Рефакторингом старого JS/jQuery кода<br>',
+        '‧ Оптимизацией скорости загрузки и старой верстки<br>',
+        '‧ Написание документации API сервиса<br>',
+        '‧ Написание unit и интегационных тестов',
       ],
     },
     {
