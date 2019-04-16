@@ -12,9 +12,7 @@
 @font-face {
   font-family: "PFDinCondensedRegular";
   src: url("fonts/PFDinCondensedRegular.eot");
-  src: url("fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"),
-  url("fonts/PFDinCondensedRegular.woff") format("woff"),
-  url("fonts/PFDinCondensedRegular.ttf") format("truetype");
+  src: url("fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"), url("fonts/PFDinCondensedRegular.woff") format("woff"), url("fonts/PFDinCondensedRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -22,9 +20,7 @@
 @font-face {
   font-family: "PFDinCondensedLight";
   src: url("fonts/PFDinCondensedLight.eot");
-  src: url("fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"),
-  url("fonts/PFDinCondensedLight.woff") format("woff"),
-  url("fonts/PFDinCondensedLight.ttf") format("truetype");
+  src: url("fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"), url("fonts/PFDinCondensedLight.woff") format("woff"), url("fonts/PFDinCondensedLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -32,9 +28,7 @@
 @font-face {
   font-family: "PFDinCondensedRegular";
   src: url("../../public/onts/PFDinCondensedRegular.eot");
-  src: url("../../public/fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"),
-  url("../../public/fonts/PFDinCondensedRegular.woff") format("woff"),
-  url("../../public/fonts/PFDinCondensedRegular.ttf") format("truetype");
+  src: url("../../public/fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"), url("../../public/fonts/PFDinCondensedRegular.woff") format("woff"), url("../../public/fonts/PFDinCondensedRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -42,38 +36,30 @@
 @font-face {
   font-family: "PFDinCondensedLight";
   src: url("../../public/fonts/PFDinCondensedLight.eot");
-  src: url("../../public/fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"),
-  url("../../public/fonts/PFDinCondensedLight.woff") format("woff"),
-  url("../../public/fonts/PFDinCondensedLight.ttf") format("truetype");
+  src: url("../../public/fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"), url("../../public/fonts/PFDinCondensedLight.woff") format("woff"), url("../../public/fonts/PFDinCondensedLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-
 
 body {
   padding: 0;
   margin: 0;
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-color: var(--nord6);
-  background-image: linear-gradient(to bottom,var(--nord4), var(--nord6));
+  background-image: linear-gradient(to bottom, var(--nord4), var(--nord6));
   font-family: PFDinCondensedLight, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.2em;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
   font-weight: normal;
   letter-spacing: 1.5px;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   text-transform: uppercase;
 }
 
@@ -124,8 +110,38 @@ br {
   clear: both;
 }
 
-tr:hover {
+table {
+  border-collapse: collapse;
+}
+
+td:nth-child(2n+1) {
+  padding-left: 5px;
+}
+
+td:nth-child(2n+2) {
+  padding-left: 15px;
+}
+
+td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+tr:nth-child(2n+1) {
   background-color: var(--nord0);
+}
+
+tr:nth-child(2n+2) {
+  background-color: var(--nord3);
+}
+
+.text-decor {
+  text-decoration: underline;
+  text-decoration-color: var(--nord9);
+}
+
+.caption {
+  font-size: 0.8em;
 }
 
 .nowrap {
@@ -136,9 +152,7 @@ tr:hover {
 
 #app {
   max-width: 1200px;
-  max-width: 1000px;
   margin: 0 auto;
-  padding: 15px;
 }
 
 .container {
@@ -147,10 +161,9 @@ tr:hover {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
 
-.sidebar,
-.content {
+.sidebar, .content {
   box-sizing: content-box;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }

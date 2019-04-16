@@ -7,7 +7,7 @@ const templateMain = `
       <img 
         class="sidebar__header-foto" 
         src="{{ data.foto }}" 
-        alt="{{ data.name }}" 
+        alt="foto {{ data.name }}" 
         itemprop="image"
       ></img>
     </div>
@@ -18,10 +18,6 @@ const templateMain = `
         <tr>
           <td>{{ data.i.name }}</td>
           <td>{{ data.name }}</td>
-        </tr>
-        <tr>
-          <td>{{ data.i.age }}</td>
-          <td>{{ data.age }}</td>
         </tr>
         <tr>
           <td>{{ data.i.email }}</td>
@@ -36,8 +32,12 @@ const templateMain = `
           <td>{{ data.relocation }}</td>
         </tr>
         <tr>
-          <td>{{ data.i.family }}</td>
-          <td>{{ data.family }}</td>
+          <td>{{ data.i.employment }}</td>
+          <td>{{ data.employment.join(', <wbr>') }}</td>
+        </tr>
+        <tr>
+          <td>{{ data.i.workSchedule }}</td>
+          <td>{{ data.workSchedule.join(', <wbr>') }}</td>
         </tr>
       </table>
     </div>
@@ -45,17 +45,15 @@ const templateMain = `
     <div class="sidebar__section">
       <h2 class="sidebar-section__title">{{ data.i.links }}</h2>
       {% data.links.forEach((link) => { %}
-      <p class="sidebar-section__contact-link nowrap">
-        <a href="{{ link.link }}" target="_blank">
-          <span class="link-icon icon-{{ link.icon }}"></span> {{ link.name }}</a>
-      </p>
+        <a class="sidebar-section__contact-link nowrap" href="{{ link.link }}" target="_blank">
+          <span class="link-icon icon-{{ link.icon }}"></span> {{ link.name }}
+        </a>
       {% }) %}
     </div>
 
     <div class="sidebar__section">
       <h2 class="sidebar-section__title">{{ data.i.hobbies }}</h2>
-      {% const hobbies = data.hobbies.join(', <br>') %}
-      {{ hobbies }}.
+      {{ data.hobbies.join(', <br>') }}.
     </div>
 
   </div>
@@ -73,9 +71,9 @@ const templateMain = `
         <span class="download-icon icon-print" onclick="window.print();"></span>
       </div>
       <div class="content-bar__language">
-        <a onClick="switchLanguage('en')" href="#">English</a>
-        <br>
-        <a onClick="switchLanguage('ru')" href="#ru">Русский</a>
+        <!-- <a onClick="switchLanguage('en')" href="#">English</a> -->
+        <!-- <br> -->
+        <!-- <a onClick="switchLanguage('ru')" href="#ru">Русский</a> -->
       </div>
     </div>
 
@@ -102,15 +100,42 @@ const templateMain = `
       <br>
 
       {% data.professionalSkills.forEach((block) => { %} 
-        <h4>{{ block.title }}</h4>
-        {% const skills = block.skills.join(', ') %}
-        {{ skills }}.
+        <h4 class="text-decor">{{ block.title }}</h4>
+        {{ block.skills.join(' ') }}.
         <br><br>
       {% }) %}
     </div>
 
     <div class="content__section">
-      
+        <h2 class="content-section__title">
+          <span class="icon icon-work"></span>
+          {{ data.i.work }}
+        </h2>
+        {% data.works.forEach((work) => { %}
+        <div class="content-section__item section-item">
+          <div class="section-item__dates">
+            <div class="section-item__dates-start">{{ work.dateStart }}</div>
+            <div class="section-item__dates-end">
+              {{ work.dateEnd ? work.dateEnd : data.i.currentTime }}
+            </div>
+          </div>
+          <div class="section-item__body">
+            <h4 class="section-item__title">
+              {{ work.title }} 
+              {% if (work.dateEnd-work.dateStart) { %}
+                <span class="nowrap">
+                  ({{ data.f.getTextYear(work.dateEnd-work.dateStart) }})
+                </span>
+              {% } %}
+            </h4>
+            <div class="section-item__subtitle">{{ work.subtitle }}</div>
+            <div class="section-item__description">{{ work.description }}</div>
+          </div>
+        </div>
+        {% }) %}
+      </div>
+
+    <div class="content__section">
       <h2 class="content-section__title">
         <span class="icon icon-project"></span>
         {{ data.i.projects }}
@@ -119,7 +144,13 @@ const templateMain = `
       <div class="content-section__item section-item">
         <div class="section-item__dates"></div>
         <div class="section-item__body section-item__body-project">
-          <h4><a href="{{ project.link }}">{{ project.title }}</a></h4>
+          <h4>
+            {% if(project.link) { %}
+              <a href="{{ project.link }}">{{ project.title }}</a> 
+            {% } else { %}
+              {{ project.title }}
+            {% } %}
+          </h4>
           <div class="section-item__description">{{ project.description }}</div>
         </div>
       </div>
@@ -127,31 +158,6 @@ const templateMain = `
     </div>
 
     <div class="content__section">
-      
-      <h2 class="content-section__title">
-        <span class="icon icon-work"></span>
-        {{ data.i.work }}
-      </h2>
-      {% data.works.forEach((work) => { %}
-      <div class="content-section__item section-item">
-        <div class="section-item__dates">
-          <div class="section-item__dates-start">{{ work.dateStart }}</div>
-          <div class="section-item__dates-end">{{ work.dateEnd }}</div>
-        </div>
-        <div class="section-item__body">
-          <h4 class="section-item__title">
-            {{ work.title }} 
-            <span class="nowrap">({{ data.f.getTextYear(work.dateEnd-work.dateStart) }})</span>
-          </h4>
-          <div class="section-item__subtitle">{{ work.subtitle }}</div>
-          <div class="section-item__description">{{ work.description }}</div>
-        </div>
-      </div>
-      {% }) %}
-    </div>
-
-    <div class="content__section">
-      
       <h2 class="content-section__title">
         <span class="icon icon-education"></span>
         {{ data.i.education }}
@@ -167,8 +173,12 @@ const templateMain = `
             {{ education.title }}
             <span class="nowrap">({{ data.f.getTextYear(education.dateEnd-education.dateStart) }})</span>
             </h4>
-          <div class="section-item__subtitle">{{ education.subtitle }}</div>
-          <div class="section-item__description">{{ education.description }}</div>
+            {% if(education.subtitle) { %}
+              <div class="section-item__subtitle">{{ education.subtitle }}</div>
+            {% } %}
+            {% if(education.description) { %}
+              <div class="section-item__description">{{ education.description }}</div>
+            {% } %}
         </div>
       </div>
       {% }) %}
