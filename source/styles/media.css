@@ -161,8 +161,8 @@
     margin-left: 10px;
   }
   .content .content__section:nth-child(5n+5) {
-    margin-bottom: 90px;
     /* 2 PAGE */
+    margin-bottom: 100px;
   }
   .sidebar__header-foto {
     border-radius: 0;
