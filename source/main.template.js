@@ -28,16 +28,21 @@ const templateMain = `
           <td>{{ data.location }}</td>
         </tr>
         <tr>
-          <td>{{ data.i.relocation }}</td>
-          <td>{{ data.relocation }}</td>
-        </tr>
-        <tr>
           <td>{{ data.i.employment }}</td>
           <td>{{ data.employment.join(', <wbr>') }}</td>
         </tr>
         <tr>
           <td>{{ data.i.workSchedule }}</td>
           <td>{{ data.workSchedule.join(', <wbr>') }}</td>
+        </tr>
+        <tr>
+          <td colspan="2">{{ data.relocation }}</td>
+        </tr>
+        <tr>
+          <td colspan="2">{{ data.remoteWork }}</td>
+        </tr>
+        <tr>
+          <td colspan="2">{{ data.businessTrip }}</td>
         </tr>
       </table>
     </div>
@@ -109,24 +114,22 @@ const templateMain = `
     <div class="content__section">
         <h2 class="content-section__title">
           <span class="icon icon-work"></span>
-          {{ data.i.work }}
+          {{ data.i.work }} - {{ data.f.getTextYear(data.f.getExperienceYear(data.works)) }}
         </h2>
         {% data.works.forEach((work) => { %}
         <div class="content-section__item section-item">
           <div class="section-item__dates">
             <div class="section-item__dates-start">{{ work.dateStart }}</div>
             <div class="section-item__dates-end">
-              {{ work.dateEnd ? work.dateEnd : data.i.currentTime }}
+              {{ work.untilNow ? data.i.currentTime : work.dateEnd }}
             </div>
           </div>
           <div class="section-item__body">
             <h4 class="section-item__title">
               {{ work.title }} 
-              {% if (work.dateEnd-work.dateStart) { %}
-                <span class="nowrap">
-                  ({{ data.f.getTextYear(work.dateEnd-work.dateStart) }})
-                </span>
-              {% } %}
+              <span class="nowrap">
+                ({{ data.f.getTextYear(work.dateEnd - work.dateStart) }})
+              </span>
             </h4>
             <div class="section-item__subtitle">{{ work.subtitle }}</div>
             <div class="section-item__description">{{ work.description }}</div>

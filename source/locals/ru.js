@@ -7,7 +7,7 @@ localizedData.ru = {
   email: 'findoss@yandex.ru',
   foto: './public/images/foto.png',
   location: 'Россия,<wbr> Санкт-Петербург',
-  relocation: 'Нет',
+  relocation: '<strong>Не</strong> готов к переезду',
   projects: [
     {
       title: 'Monitoring tracker',
@@ -34,20 +34,19 @@ localizedData.ru = {
     //     'Определение частей речи на основе Yandex.MyStem<br>Frontend: Vanilla JS, html, css<br>Backend: Node.js (express, Yandex.Stem)<br>',
     // },
   ],
+  businessTrip: 'Готов к командировкам',
+  remoteWork: 'Готов к удаленной работе',
   employment: [
     'проектная&nbsp;работа',
     'частичная&nbsp;занятость',
     'полная&nbsp;занятость',
   ],
-  workSchedule: [
-    'удаленная&nbsp;работа',
-    'гибкий&nbsp;график',
-    'полный&nbsp;день',
-  ],
+  workSchedule: ['гибкий&nbsp;график', 'полный&nbsp;день'],
   works: [
     {
-      dateStart: 2018,
-      // dateEnd: ,
+      dateStart: 2019,
+      dateEnd: new Date().getFullYear(),
+      untilNow: true,
       title: 'Freelance',
       subtitle:
         'Занимаюсь редактированием, поддержкой, созданием компонентов для SPA приложений, интеграция API в клиент, оптимизация и тестирование.',
@@ -55,16 +54,16 @@ localizedData.ru = {
         'Vue + vuex, React + redux, JQuery, vanilla js, css, styles, API.',
     },
     {
-      dateStart: 2017,
-      dateEnd: 2018,
+      dateStart: 2018,
+      dateEnd: 2019,
       title: 'Medgadgets.ru',
       subtitle:
         'Занимался версткой (адаптивная, семантическая), созданием компонентов, реализация логики на клиенте, интеграция API, оптимизация.',
       description: 'React + redux',
     },
     {
-      dateStart: 2015,
-      dateEnd: 2017,
+      dateStart: 2016,
+      dateEnd: 2018,
       title: 'Freelance',
       subtitle: 'Создал несколько сайтов и два небольших интернет-магазина.',
       description:
@@ -73,7 +72,7 @@ localizedData.ru = {
   ],
   educations: [
     {
-      dateStart: 2017,
+      dateStart: 2018,
       dateEnd: 2018,
       title: 'Обучение с наставником',
       subtitle:
@@ -82,7 +81,7 @@ localizedData.ru = {
         'Основные темы: Patterns programming, js(es6+) vue.js, node.js, mongodb',
     },
     {
-      dateStart: 2017,
+      dateStart: 2018,
       dateEnd: 2018,
       title: 'Курсы на Сoursera',
       subtitle: '',
@@ -107,8 +106,8 @@ localizedData.ru = {
         '‧ Локализацией SPA<br>',
         '‧ Рефакторингом старого JS/jQuery кода<br>',
         '‧ Оптимизацией скорости загрузки и старой верстки<br>',
-        '‧ Написание документации API сервиса<br>',
-        '‧ Написание unit и интегационных тестов',
+        '‧ Написанием документации API сервиса<br>',
+        '‧ Написанием unit и интегационных тестов',
       ],
     },
     {
@@ -190,7 +189,6 @@ localizedData.ru = {
     currentTime: '<span class="caption">по<wbr> настоящее<wbr> время</span>',
     location: 'Адрес',
     family: 'Семейное положение',
-    relocation: 'Готов к<wbr> переездам',
   },
   f: {
     getTextYear: (time) => {
@@ -202,6 +200,9 @@ localizedData.ru = {
         remainder10 === 0 ||
         (remainder100 > 10 && remainder100 <= 19)
       ) {
+        if (time === 0) {
+          return `менее ${years[1]}`;
+        }
         return `${time} ${years[2]}`;
       } else if (remainder10 === 1) {
         return `${time} ${years[0]}`;
@@ -209,5 +210,12 @@ localizedData.ru = {
         return `${time} ${years[1]}`;
       }
     },
+    getExperienceYear: arr =>
+      arr.reduce((a, v) => {
+        if (v.dateEnd) {
+          return a + (v.dateEnd - v.dateStart);
+        }
+        return a + (new Date().getFullYear() - v.dateStart);
+      }, 0),
   },
 };

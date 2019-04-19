@@ -34,7 +34,7 @@
   .sidebar__header {
     padding-bottom: 20px;
   }
-  .sidebar__section:nth-last-child(-n+2) {
+  .sidebar__section:nth-last-child(-n + 2) {
     display: none;
   }
   .sidebar__section, .content__section {
@@ -121,7 +121,7 @@
     justify-content: space-between;
     padding-bottom: 0;
   }
-  .sidebar:nth-last-child(-n+2) {
+  .sidebar:nth-last-child(-n + 2) {
     padding-top: 40px;
   }
   .sidebar, .content {
@@ -156,13 +156,13 @@
     font-size: 0.9em;
   }
   .content-header__subtitle::before {
-    content: '-';
+    content: "-";
     margin-right: 10px;
     margin-left: 10px;
   }
-  .content .content__section:nth-child(5n+5) {
+  .content .content__section:nth-child(5n + 5) {
     /* 2 PAGE */
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
   .sidebar__header-foto {
     border-radius: 0;
@@ -184,13 +184,13 @@
     border-left: 1px solid var(--nord0);
   }
   /* display none */
-  table tr:nth-child(-n+1) {
+  table tr:nth-child(-n + 1) {
     display: none;
   }
   .sidebar-section__title {
     display: none;
   }
-  .content .content__section:nth-child(-n+3) {
+  .content .content__section:nth-child(-n + 3) {
     display: none;
   }
   .icon {
@@ -199,7 +199,7 @@
   .content__section {
     padding-left: 0;
   }
-  .sidebar__section:nth-last-child(-n+2) {
+  .sidebar__section:nth-last-child(-n + 2) {
     display: none;
   }
   .content__section-signature {
@@ -217,7 +217,7 @@
     display: none;
   }
   .section-item__dates-start::after {
-    content: '─────';
+    content: "─────";
   }
   .section-item__dates-end {
     width: 60px;
