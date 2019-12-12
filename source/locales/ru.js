@@ -134,8 +134,8 @@ const LOCALIZED_RU = {
       skills: [
         'Node.js (Koa / Express),',
         'Mocha / Сhai / Karma,',
+        'Pasport.js,',
         'JWT,',
-        'Node.js,',
         'MongoDB,',
         'MySQL',
       ],
