@@ -1,5 +1,4 @@
-const localizedData = {};
-localizedData.en = {
+const LOCALIZED_EN = {
   local: 'en',
   name: 'Nikita Stroganov',
   profession: 'junior frontend developer',
@@ -162,5 +161,16 @@ localizedData.en = {
       const years = ['year', 'years'];
       return time === 1 ? `${time} ${years[0]}` : `${time} ${years[1]}`;
     },
+    getExperienceYear: arr =>
+      arr.reduce((a, v) => {
+        if (v.dateEnd) {
+          return a + (v.dateEnd - v.dateStart);
+        }
+        return a + (new Date().getFullYear() - v.dateStart);
+      }, 0),
   },
 };
+
+if (global) {
+  module.exports = LOCALIZED_EN;
+}

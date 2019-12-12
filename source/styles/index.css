@@ -12,7 +12,9 @@
 @font-face {
   font-family: "PFDinCondensedRegular";
   src: url("fonts/PFDinCondensedRegular.eot");
-  src: url("fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"), url("fonts/PFDinCondensedRegular.woff") format("woff"), url("fonts/PFDinCondensedRegular.ttf") format("truetype");
+  src: url("fonts/PFDinCondensedRegular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/PFDinCondensedRegular.woff") format("woff"),
+    url("fonts/PFDinCondensedRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -20,7 +22,9 @@
 @font-face {
   font-family: "PFDinCondensedLight";
   src: url("fonts/PFDinCondensedLight.eot");
-  src: url("fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"), url("fonts/PFDinCondensedLight.woff") format("woff"), url("fonts/PFDinCondensedLight.ttf") format("truetype");
+  src: url("fonts/PFDinCondensedLight.eot?#iefix") format("embedded-opentype"),
+    url("fonts/PFDinCondensedLight.woff") format("woff"),
+    url("fonts/PFDinCondensedLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -28,7 +32,10 @@
 @font-face {
   font-family: "PFDinCondensedRegular";
   src: url("../../public/onts/PFDinCondensedRegular.eot");
-  src: url("../../public/fonts/PFDinCondensedRegular.eot?#iefix")format("embedded-opentype"), url("../../public/fonts/PFDinCondensedRegular.woff") format("woff"), url("../../public/fonts/PFDinCondensedRegular.ttf") format("truetype");
+  src: url("../../public/fonts/PFDinCondensedRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/PFDinCondensedRegular.woff") format("woff"),
+    url("../../public/fonts/PFDinCondensedRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -36,7 +43,10 @@
 @font-face {
   font-family: "PFDinCondensedLight";
   src: url("../../public/fonts/PFDinCondensedLight.eot");
-  src: url("../../public/fonts/PFDinCondensedLight.eot?#iefix")format("embedded-opentype"), url("../../public/fonts/PFDinCondensedLight.woff") format("woff"), url("../../public/fonts/PFDinCondensedLight.ttf") format("truetype");
+  src: url("../../public/fonts/PFDinCondensedLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/PFDinCondensedLight.woff") format("woff"),
+    url("../../public/fonts/PFDinCondensedLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -48,18 +58,25 @@ body {
   background-attachment: fixed;
   background-color: var(--nord6);
   background-image: linear-gradient(to bottom, var(--nord4), var(--nord6));
-  font-family: PFDinCondensedLight, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: PFDinCondensedLight, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.2em;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
   font-weight: normal;
   letter-spacing: 1.5px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
 }
 
@@ -96,14 +113,9 @@ p {
 }
 
 ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding-inline-start: 20px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 br {
@@ -114,11 +126,11 @@ table {
   border-collapse: collapse;
 }
 
-td:nth-child(2n+1) {
+td:nth-child(2n + 1) {
   padding-left: 5px;
 }
 
-td:nth-child(2n+2) {
+td:nth-child(2n + 2) {
   padding-left: 15px;
 }
 
@@ -127,11 +139,11 @@ td {
   padding-bottom: 5px;
 }
 
-tr:nth-child(2n+1) {
+tr:nth-child(2n + 1) {
   background-color: var(--nord0);
 }
 
-tr:nth-child(2n+2) {
+tr:nth-child(2n + 2) {
   background-color: var(--nord3);
 }
 
@@ -155,13 +167,29 @@ tr:nth-child(2n+2) {
   margin: 0 auto;
 }
 
+.sidebar__header {
+  position: relative;
+}
+
+.sidebar__header::after {
+  /* content: url("../../public/images/qr-code-mail.svg"); */
+  content: url("./images/qr-code-mail.svg");
+  display: none;
+  width: 176px;
+  height: 176px;
+  position: absolute;
+  right: 40px;
+  top: 150px;
+}
+
 .container {
   width: 100%;
   display: flex;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-.sidebar, .content {
+.sidebar,
+.content {
   box-sizing: content-box;
   padding-top: 30px;
   padding-left: 20px;
@@ -173,7 +201,11 @@ tr:nth-child(2n+2) {
   min-width: 250px;
   max-width: 300px;
   background-color: var(--nord3);
-  background-image: linear-gradient(to bottom right, var(--nord0), var(--nord3));
+  background-image: linear-gradient(
+    to bottom right,
+    var(--nord0),
+    var(--nord3)
+  );
   color: var(--nord6);
 }
 
