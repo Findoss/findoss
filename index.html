@@ -131,13 +131,46 @@
 
   <!-- content -->
   <div class="content">
-    Update
-  </div>
-
-    <div class="content__section content__section-signature">
-      Stroganov N.
+    <div class="content__bar">
+      <div class="content-bar__download">
+        <a href="./public/Nikita_Stroganov_ru.pdf" target="_blank">
+          <span class="download-icon icon-pdf"></span>
+        </a>
+      </div>
+      <div class="content-bar__print">
+        <span class="download-icon icon-print" onclick="window.print();"></span>
+      </div>
+      <div class="content-bar__language">
+        <!-- <a onClick="switchLanguage('en')" href="#">English</a> -->
+        <!-- <br> -->
+        <!-- <a onClick="switchLanguage('ru')" href="#ru">Русский</a> -->
+      </div>
     </div>
-    <img src="./public/images/footer.svg" class="footer">
+
+    <div class="content__header">
+      <h1 class="content-header__name" itemprop="name">Строганов Никита</h1>
+      <span class="content-header__subtitle caption" itemprop="jobTitle">frontend разработчик</span>
+    </div>
+
+    <style>
+      .sidebar, .content {
+        height: 97vh;
+      }
+
+      .xxx {
+        position: absolute !important;
+        bottom: 1vh !important;
+      }
+    </style>
+
+    Update
+
+    <div class="xxx">
+      <div class="content__section content__section-signature">
+        Stroganov N.
+      </div>
+      <img src="./public/images/footer.svg" class="footer">
+    </div>
   </div>
   <!-- end content -->
 </div>
