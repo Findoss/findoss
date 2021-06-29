@@ -1,8 +1,5 @@
 <h1 align="center">Hi 👋, I'm frontend developer</h1>
 
-[![Hunt-map](https://github-readme-stats.vercel.app/api/pin/?username=findoss&repo=Hunt-map)](https://github.com/Findoss/Hunt-map)
-[![Game-TD101](https://github-readme-stats.vercel.app/api/pin/?username=SPB-101&repo=Game-TD101&theme=default)](https://github.com/SPB-101/Game-TD101)
-
 <h3>Languages and Tools:</h3>
 
 <img
