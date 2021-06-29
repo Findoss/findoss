@@ -92,6 +92,7 @@
   src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png"
   alt="gulp"
   height="50"
+  width="23"
 />
 <img
   src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png"
