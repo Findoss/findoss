@@ -32,13 +32,7 @@
   width="50"
   height="50"
 />
-
-<img
-  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-  alt="vuejs"
-  width="50"
-  height="50"
-/>
+-
 <img
   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
   alt="react"
@@ -58,8 +52,8 @@
   height="50"
 />
 <img
-  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-  alt="sass"
+  src="https://miro.medium.com/max/960/1*Iohnw2aOQ5EBghVoqKA7VA.png"
+  alt="styled-components"
   width="50"
   height="50"
 />
@@ -76,32 +70,32 @@
   height="50"
 />
 <img
-  src="https://www.vectorlogo.zone/logos/mochajs/mochajs-icon.svg"
-  alt="mocha"
+  src="https://testing-library.com/img/octopus-128x128.png"
+  alt="testing-library"
   width="50"
   height="50"
 />
-
+<img
+  src="https://techlab.bol.com/app/files/2020/12/storybook-logo.jpg"
+  alt="storybook"
+  width="50"
+  height="50"
+/>
 <img
   src="https://habrastorage.org/webt/k-/tm/2g/k-tm2gvbb_ky6gdrd-tzqrzjkf4.png"
   alt="webpack"
   width="50"
   height="50"
 />
-<img
-  src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png"
-  alt="gulp"
-  height="50"
-  width="23"
-/>
-<img
-  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png"
-  alt="npm"
-  width="50"
-/>
-
+-
 <img 
   src="https://web-creator.ru/uploads/Page/22/nodejs.svg" 
+  alt="nodejs" 
+  width="50" 
+  height="50" 
+/>
+<img 
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Deno.svg/600px-Deno.svg.png?20190706023036" 
   alt="nodejs" 
   width="50" 
   height="50" 
@@ -130,13 +124,7 @@
   width="50"
   height="50"
 />
-<img
-  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-  alt="mysql"
-  width="50"
-  height="50"
-/>
-
+-
 <img
   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
   alt="docker"
@@ -161,13 +149,7 @@
   width="50"
   height="50"
 />
-
-<img
-  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/120px-Windows_logo_-_2012.svg.png"
-  alt="windows"
-  width="50"
-  height="50"
-/>
+-
 <img
   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
   alt="linux"
@@ -183,6 +165,48 @@
 <img
   src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
   alt="git"
+  width="50"
+  height="50"
+/>
+<h6>legacy<h6>
+<img
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/120px-Windows_logo_-_2012.svg.png"
+  alt="windows"
+  width="50"
+  height="50"
+/>
+<img
+  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
+  alt="vuejs"
+  width="50"
+  height="50"
+/>
+<img
+  src="https://www.vectorlogo.zone/logos/mochajs/mochajs-icon.svg"
+  alt="mocha"
+  width="50"
+  height="50"
+/>
+<img
+  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+  alt="sass"
+  width="50"
+  height="50"
+/>
+<img
+  src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png"
+  alt="gulp"
+  height="50"
+  width="23"
+/>
+<img
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1200px-Npm-logo.svg.png"
+  alt="npm"
+  width="50"
+/>
+<img
+  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+  alt="mysql"
   width="50"
   height="50"
 />
