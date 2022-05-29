@@ -76,7 +76,7 @@
   height="50"
 />
 <img
-  src="https://techlab.bol.com/app/files/2020/12/storybook-logo.jpg"
+  src="https://avatars.githubusercontent.com/u/22632046?s=200&v=4"
   alt="storybook"
   width="50"
   height="50"
