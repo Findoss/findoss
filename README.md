@@ -151,6 +151,12 @@
 />
 -
 <img
+  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg"
+  alt="linux"
+  width="50"
+  height="50"
+/>
+<img
   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
   alt="linux"
   width="50"
