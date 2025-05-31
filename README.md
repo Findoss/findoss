@@ -108,7 +108,7 @@
     </td>
     <td>
       <img
-        src="/rtl.png" width="40" height="40"
+        src="assets/rtl.png" width="40" height="40"
       />
     </td>
     <td>
@@ -150,7 +150,7 @@
     </td>
     <td>
       <img
-        src="/Nx.svg" width="40" height="40"
+        src="assets/Nx.svg" width="40" height="40"
       />
     </td>
     <td>
